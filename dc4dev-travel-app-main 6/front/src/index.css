@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.myclass {
+    @apply bg-red-500 mt-4;
+    font-size: 20px;
+}

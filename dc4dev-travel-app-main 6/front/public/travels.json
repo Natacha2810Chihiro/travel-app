@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Paris",
+        "city": "Paris",
+        "country": "France",
+        "image": "https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg",
+        "description": "Paris is known for its iconic landmarks like the Eiffel Tower, art museums like the Louvre, and its romantic atmosphere."
+    },
+    {
+        "id": 2,
+        "name": "New York City",
+        "city": "New York",
+        "country": "USA",
+        "image": "https://www.planetware.com/photos-large/USNY/new-york-city-empire-state-building.jpg",
+        "description": "New York City is famous for its skyline, Central Park, Times Square, and vibrant cultural life."
+    },
+    {
+        "id": 3,
+        "name": "Tokyo",
+        "city": "Tokyo",
+        "country": "Japan",
+        "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dG9reW98ZW58MHx8MHx8fDA%3D",
+        "description": "Tokyo is a bustling metropolis with cutting-edge technology, traditional temples, and an exciting nightlife."
+    },
+    {
+        "id": 4,
+        "name": "Rome",
+        "city": "Rome",
+        "country": "Italy",
+        "image": "https://www.planetware.com/photos-large/I/italy-rome-colosseum.jpg",
+        "description": "Rome is a city filled with ancient history, from the Colosseum to the Roman Forum, and delicious Italian cuisine."
+    },
+    {
+        "id": 5,
+        "name": "Sydney",
+        "city": "Sydney",
+        "country": "Australia",
+        "image": "https://www.planetware.com/photos-large/AUS/australia-sydney-opera-house.jpg",
+        "description": "Sydney is known for its iconic Opera House, beautiful beaches, and the stunning Sydney Harbour."
+    },
+    {
+        "id": 6,
+        "name": "London",
+        "city": "London",
+        "country": "United Kingdom",
+        "image": "https://babylontours.fr/wp-content/uploads/2016/09/london-441853_960_720.jpg",
+        "description": "London is a cultural hub with historic landmarks like Big Ben, the Tower of London, and a vibrant arts scene."
+    },
+    {
+        "id": 7,
+        "name": "Rio de Janeiro",
+        "city": "Rio de Janeiro",
+        "country": "Brazil",
+        "image": "https://reporterre.net/local/cache-gd2/81/398f8dba6bd738959fa79f34a2d2fc.jpg?1711021882",
+        "description": "Rio de Janeiro is famous for its breathtaking landscapes, Christ the Redeemer statue, and its annual Carnival celebration."
+    },
+    {
+        "id": 8,
+        "name": "Cape Town",
+        "city": "Cape Town",
+        "country": "South Africa",
+        "image": "https://www.planetware.com/photos-large/SAF/south-africa-cape-town-table-mountain.jpg",
+        "description": "Cape Town is known for its scenic beauty, including Table Mountain and its proximity to incredible wildlife."
+    },
+    {
+        "id": 9,
+        "name": "Bangkok",
+        "city": "Bangkok",
+        "country": "Thailand",
+        "image": "https://www.paradisvoyage.fr/wp-content/uploads/b/59/Bangkok-venice.jpg",
+        "description": "Bangkok is a bustling city known for its ornate temples, street food, and vibrant night markets."
+    },
+    {
+        "id": 10,
+        "name": "Dubai",
+        "city": "Dubai",
+        "country": "United Arab Emirates",
+        "image": "https://www.dubai.it/fr/wp-content/uploads/sites/143/dubai-marina-hd.jpg",
+        "description": "Dubai is famous for its modern architecture, including the Burj Khalifa, luxury shopping, and desert safaris."
+    }
+]
