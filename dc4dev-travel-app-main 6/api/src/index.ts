@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import express, { Request, Response } from 'express'; 
 
 const travelList = [
   {
@@ -33,36 +34,66 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => {
+app.get("/", (req : Request, res : Response) => {
   res.send("Heath check");
 });
 
-app.get("/travels", (req, res) => {
+app.get("/travels", (req: Request, res: Response) => {
   res.send(travelList);
 });
 
-app.post("/travels", (req, res) => {
-  console.log("POST REQUEST : ", req.body);
-  // create const travel with body
-  // add id param to object travel
-  // insert travel in travelList
-  // send back add travel object
+
+
+// pour ajouter un nouveau voyage : 
+app.post("/travels", (req : Request, res : Response) => {
+  const newTravel = req.body; // récupère les données envoyés dans le corps
+  const newId = travelList.length ? travelList[travelList.length - 1].id + 1 ; //ici on lui genère un ID unique
+  const travelWithId = { ...newTravel, id: newId}; // ici on ajoute l'id au voyage
+  travelList.push(travelWithId); // on ajoute le voyage à la liste
+  res.status(201).json(travelWithId);
   res.status(200).send("Create a travel");
 });
 
-app.delete("/travels/:id", (req, res) => {
-  console.log("DELETE REQUEST : ", req.params);
-  // create conts id with req.params.id
-  // delete travel with id in to travelList
-  // send back succes to delete
-  res.send("Delete a travel");
+// pour supprimer un voyage 
+app.delete("/travels/:id", (req : Request, res : Response) => {
+
+  const {id} = req.params; // on recupère l'Id du voyage a partir des paramètres de l'url 
+  const index = travelList.findIndex(t => t.id === parseInt(id)); //ici on trouve l'index du voyage à supprimer
+
+  if (index !== -1) {
+    travelList.splice(index, 1); // ici on supprime le voyage de la liste
+    res.status(204).send(); 
+  } else {
+    res.status(404).json({message: "Travel not found"});
+  }
 });
 
-app.get("/travels/:id", (req, res) => {
+// pour récuperer un voyage spécifique
+app.get("/travels/:id", (req: Request, res : Response) => {
+  const {id} = req.params; //recupère l'id du voyage depuis les paarmèrres de l'url
+  const travel = travelList.find(t => t.id === parseInt(id)); // on cherche le voyage avec l'id 
+
+  if (travel) {
+    res.json(travel); //on retounr le voyage trouvé
+  } else {
+    res.status(404).json ({message : "Travel not found"})
+  } 
   res.send("Get one travel");
 });
 
-app.put("/travels/:id", (req, res) => {
+
+// pour mettre à jour un voyage : 
+app.put("/travels/:id", (req : Request, res : Response) => {
+  const { id } = req.params;
+  const updatedTravel = req.body; // Les nouvelles données du voyage
+  const index = travelList.findIndex(t => t.id === parseInt(id)); // ici on trouver l'index du voyage à mettre à jour
+
+  if (index !== -1) {
+    travelList[index] = { ...travelList[index], ...updatedTravel }; // on met à jour les propriétés du voyage
+    res.json(travelList[index]); // on retourne le voyage mis à jour
+  } else {
+    res.status(404).json({ message: "Travel not found" });
+  }
   res.send("Update a travel");
 });
 
